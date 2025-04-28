@@ -1,0 +1,22 @@
+{
+    "name": "DS Project DevContainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "esbenp.prettier-vscode"
+    ],
+    "remoteUser": "lgorman",
+    // "workspaceMount": "source=${localWorkspaceFolder}/,target=/workspace,type=bind",
+    // "workspaceFolder": "../",    
+    // "mounts": [
+    //     "source=${localWorkspaceFolder}/README.md,target=/workspace/README.md,type=bind",
+    //     "source=${localWorkspaceFolder}/data, target=/workspace/data,type=bind"
+
+    // ]
+}
