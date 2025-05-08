@@ -32,7 +32,8 @@ This project includes a development container configuration. To use it:
 
 3. Initialise environment with packages you need for main project:
     ```bash
-    pixi add python>3.10 pymc>5 pandas arviz numpy
+    pixi add python>3.10 pymc>5 pandas arviz numpy ipykernel
+    pixi add --feature dev-feat pytest black pylint jupyterlab
     ```
 4. Add any additional packages you need for development:
     ```bash
@@ -41,7 +42,7 @@ This project includes a development container configuration. To use it:
     pixi task add test --feature dev-feat pytest
     pixi task add lint --feature dev-feat pylint
     pixi task add format --feature dev-feat black
-    pixi task add init-docs --feature dev-feat sphinx quickstart
+    pixi task add jupyterlab --feature dev-feat jupyterlab
     ``` 
 
 

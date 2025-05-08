@@ -1,7 +1,7 @@
 [project]
 authors = [{name = "l-gorman", email = "leo.gorman@bristol.ac.uk"}]
 dependencies = []
-name = "structuring_ds_project"
+name = "ds_project"
 requires-python = ">= 3.11"
 version = "0.1.0"
 
@@ -14,22 +14,28 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64", "win-64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-structuring_ds_project = { path = ".", editable = true }
+ds_project = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 
 [tool.pixi.dependencies]
 python = ">=3.13.3,<3.14"
-pymc = ">=5.22.0,<6"
+pymc = ">=5.19.0,<6"
 pandas = ">=2.2.3,<3"
 arviz = ">=0.21.0,<0.22"
 numpy = ">=2.2.5,<3"
+ipykernel = ">=6.29.5,<7"
+seaborn = ">=0.13.2,<0.14"
+matplotlib = ">=3.10.1,<4"
+numba = ">=0.61.2,<0.62"
+ipywidgets = ">=8.1.7,<9"
 
 [tool.pixi.feature.dev-feat.dependencies]
 pytest = "*"
 black = "*"
 pylint = "*"
 sphinx = ">=8.2.3,<9"
+jupyterlab = ">=4.4.2,<5"
 
 [tool.pixi.feature.dev-feat.tasks]
 test = "pytest"
@@ -37,6 +43,8 @@ lint = "pylint"
 format = "black"
 init-docs = "cd docs && sphinx-quickstart"
 build-docs = "cd docs && make html"
+jupyterlab = "jupyter lab"
+
 
 [tool.pixi.environments]
 dev-env = ["dev-feat"]
